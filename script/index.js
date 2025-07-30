@@ -183,14 +183,14 @@ $(document).ready(function () {
 
 // 텍스트 이미지 스크롤콘텐츠
 
-$(window).scroll(function(){
+$(window).scroll(function () {
 
     var scTop = $(this).scrollTop();
     console.log(scTop);
 
     var winHeight = $(this).height();
     console.log('브라우저 화면의 높잇값: ' + winHeight);
-    
+
     var gap = Math.ceil(winHeight * 0.9);
     console.log('gap: ' + gap);
 
@@ -206,110 +206,90 @@ $(window).scroll(function(){
 
     //3번 박스 등장
 
-    var box1pos = $('.txt-box1').eq(0).offset().top - gap; 
+    var box1pos = $('.txt-box1').eq(0).offset().top - gap;
     console.log('3번째 박스 등장 스크롤 기준값: ' + box3pos);
 
     if (scTop > box1pos) {
         $('.txt-box1').eq(0).animate({
-            opacity:1
-        },1000);
+            opacity: 1
+        }, 1000);
     }
 
     //4번 박스 등장
     var box2pos = $('#img-box1').eq(0).offset().top - gap;
 
-    if(scTop > box2pos) {
+    if (scTop > box2pos) {
         $('#img-box1').eq(0).animate({
-            opacity:1
-        },1000, );
+            opacity: 1
+        }, 1000,);
     }
 
     var box3pos = $('.txt-box2').eq(0).offset().top - gap;
 
-    if(scTop > box3pos) {
+    if (scTop > box3pos) {
         $('.txt-box2').eq(0).animate({
-            opacity:1
-        },1000);
+            opacity: 1
+        }, 1000);
     }
 
     var box4pos = $('#img-box2').eq(0).offset().top - gap;
 
-    if(scTop > box4pos) {
+    if (scTop > box4pos) {
         $('#img-box2').eq(0).animate({
-            opacity:1
-        },1000);
+            opacity: 1
+        }, 1000);
     }
 
     var box4pos = $('.txt-box3').eq(0).offset().top - gap;
 
-    if(scTop > box4pos) {
-        $('.txt-box3').eq(0).css({
-            top: '-100px'
-        }).animate({
-            top:'0',
-            opacity:1
-        },1000);
+    if (scTop > box4pos) {
+        $('.txt-box3').eq(0).addClass('active');
     }
 
     var box4pos = $('#img-box3').eq(0).offset().top - gap;
 
-    if(scTop > box4pos) {
-        $('#img-box3').eq(0).css({
-            top: '-100px'
-        }).animate({
-            top:'0',
-            opacity:1
-        },1000);
+    if (scTop > box4pos) {
+        $('#img-box3').eq(0).addClass('active');
     }
 
     var box4pos = $('.txt-box4').eq(0).offset().top - gap;
 
-    if(scTop > box4pos) {
-        $('.txt-box4').eq(0).css({
-            top: '-100px'
-        }).animate({
-            top:'0',
-            opacity:1
-        },1000);
+    if (scTop > box4pos) {
+        $('.txt-box4').eq(0).addClass('active');
     }
 
     var box4pos = $('#img-box4').eq(0).offset().top - gap;
 
-    if(scTop > box4pos) {
-        $('#img-box4').eq(0).css({
-            top: '-100px'
-        }).animate({
-            top:'0',
-            opacity:1
-        },1000);
+    if (scTop > box4pos) {
+        $('#img-box4').eq(0).addClass('active');
     }
 
     var box4pos = $('.box').eq(3).offset().top - gap;
 
-    if(scTop > box4pos) {
+    if (scTop > box4pos) {
         $('.box').eq(3).find('.img-box').animate({
             width: '50%'
-        },800, function(){
+        }, 800, function () {
             $(this).prev().fadeIn(600);
         });
     }
 
     var box4pos = $('.box').eq(3).offset().top - gap;
 
-    if(scTop > box4pos) {
+    if (scTop > box4pos) {
         $('.box').eq(3).find('.img-box').animate({
             width: '50%'
-        },800, function(){
+        }, 800, function () {
             $(this).prev().fadeIn(600);
         });
     }
 
     var box4pos = $('.box').eq(3).offset().top - gap;
 
-    if(scTop > box4pos) {
+    if (scTop > box4pos) {
         $('.box').eq(3).find('.img-box').animate({
             width: '50%'
-        },800, function(){
+        }, 800, function () {
             $(this).prev().fadeIn(600);
         });
     }
