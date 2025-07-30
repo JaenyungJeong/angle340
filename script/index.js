@@ -263,7 +263,7 @@ $(window).scroll(function(){
         }).animate({
             top:'0',
             opacity:1
-        },800);
+        },1000);
     }
 
     var box4pos = $('.txt-box4').eq(0).offset().top - gap;
@@ -289,7 +289,7 @@ $(window).scroll(function(){
         }).animate({
             top:'0',
             opacity:1
-        },800);
+        },1000);
     }
 
     var box4pos = $('.box').eq(3).offset().top - gap;
