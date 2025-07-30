@@ -244,9 +244,7 @@ $(window).scroll(function(){
 
     if(scTop > box4pos) {
         $('.txt-box3').eq(0).css({
-            top: '-100px',
-            opacity: 0, 
-            position: 'relative'
+            top: '-100px'
         }).animate({
             top:'0',
             opacity:1
@@ -257,9 +255,7 @@ $(window).scroll(function(){
 
     if(scTop > box4pos) {
         $('#img-box3').eq(0).css({
-            top: '-100px',
-            opacity: 0, 
-            position: 'relative'
+            top: '-100px'
         }).animate({
             top:'0',
             opacity:1
@@ -270,9 +266,7 @@ $(window).scroll(function(){
 
     if(scTop > box4pos) {
         $('.txt-box4').eq(0).css({
-            top: '-100px',
-            opacity: 0, 
-            position: 'relative'
+            top: '-100px'
         }).animate({
             top:'0',
             opacity:1
@@ -283,9 +277,7 @@ $(window).scroll(function(){
 
     if(scTop > box4pos) {
         $('#img-box4').eq(0).css({
-            top: '-100px',
-            opacity: 0, 
-            position: 'relative'
+            top: '-100px'
         }).animate({
             top:'0',
             opacity:1

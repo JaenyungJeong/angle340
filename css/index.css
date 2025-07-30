@@ -519,6 +519,10 @@ main .pager li.active {
     color: #113829;
 }
 
+.favorite {
+    margin-bottom: 90px;
+}
+
 .intro .content .favorite-des {
     font-family: "Outfit", sans-serif;
     padding: 10px 20px;
