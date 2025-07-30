@@ -99,12 +99,15 @@ header .cafe-header .gnb .header-menu li a:hover {
             list-style: none; /* 기본 불릿 제거 */
 
             display: none;
+
+            border-radius: 0 0 10px 10px;
             
         }
 
         .depth01 > li > ul.depth02 > li {
             margin: 0; /* li의 기본 마진 제거 */
             padding: 0; /* li의 기본 패딩 제거 */
+            
         }
 
         .depth01 > li > ul.depth02 > li > a {
