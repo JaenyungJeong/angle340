@@ -20,7 +20,7 @@ header .cafe-header {
     width: 100%;
     max-width: 1440px;
     height: 90px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0 auto;
     font-size: 16px;
     font-weight: 500;
@@ -69,3 +69,54 @@ header .cafe-header .gnb .header-menu li a:hover {
     color: #113829;
     text-decoration: underline;
 }
+
+.depth01 > li {
+            position: relative;
+            /* .depth02의 기준! */
+            /* outline: 2px solid limegreen; */
+        }
+
+.depth01 > li > a {
+    transition: all 0.5s;
+}
+
+.depth01>li>a:hover {
+    transform: scale(1.2);
+}
+
+.depth01 > li > ul.depth02 {
+            /* outline: 2px solid green; */
+            background-color: rgba(0, 0, 0, 0.1);
+
+            position: absolute; /* 앱솔루트 안하면 접혔을시 화면이 위로 밀림!!! */
+            left: 0;
+            top: 100%;
+
+            width: auto; /* 100%에서 auto로 변경하여 텍스트에 맞게 조정 */
+            min-width: 100%; /* 최소 너비는 부모와 같게 */
+            padding: 0; /* ul의 기본 패딩 제거 */
+            margin: 0; /* ul의 기본 마진 제거 */
+            list-style: none; /* 기본 불릿 제거 */
+
+            display: none;
+            
+        }
+
+        .depth01 > li > ul.depth02 > li {
+            margin: 0; /* li의 기본 마진 제거 */
+            padding: 0; /* li의 기본 패딩 제거 */
+        }
+
+        .depth01 > li > ul.depth02 > li > a {
+            line-height: 1.5; /* none 대신 적절한 값으로 수정 */
+            padding: 8px 15px; /* 적절한 패딩 추가 */
+            display: block; /* 블록 레벨로 설정 */
+            color: #fff; /* 텍스트 색상 */
+            text-decoration: none; /* 밑줄 제거 */
+            white-space: nowrap; /* 줄바꿈 방지 */
+        }
+
+        .depth01 > li > ul.depth02 > li > a:hover {
+           
+        }
+
