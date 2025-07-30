@@ -157,9 +157,9 @@ function fadeSlide() {
     pager();
 }
 
-function pager (){
+function pager() {
     var idx = $('.main-img-slide').eq(1).attr('data-seq');
-    console.log('다음 슬라이드의 data-seq: ' +idx);
+    console.log('다음 슬라이드의 data-seq: ' + idx);
 
     $('.pager li').eq(idx).addClass('active').siblings().removeClass('active');
 }
@@ -167,17 +167,95 @@ function pager (){
 
 
 
-$(document).ready(function(){
-            //mouseenter, mouseleave
-            //mouseover, mouseout
+$(document).ready(function () {
+    //mouseenter, mouseleave
+    //mouseover, mouseout
 
-            $('.depth01 > li').mouseenter(function(){
-                // $('.depth02').slideDown();
-                $(this).find('.depth02').stop().slideDown(); // .stop 슬라이드업 되는 것 멈추고 슬라이드 다운하기
-            });
+    $('.depth01 > li').mouseenter(function () {
+        // $('.depth02').slideDown();
+        $(this).find('.depth02').stop().slideDown(); // .stop 슬라이드업 되는 것 멈추고 슬라이드 다운하기
+    });
 
-            $('.depth01 > li').mouseleave(function(){
-                $('.depth02').stop().slideUp(); //슬라이드다운되는 것 멈추고 슬라이드 업하기
-            });
+    $('.depth01 > li').mouseleave(function () {
+        $('.depth02').stop().slideUp(); //슬라이드다운되는 것 멈추고 슬라이드 업하기
+    });
+});
+
+// 텍스트 이미지 스크롤콘텐츠
+
+$(window).scroll(function(){
+
+    var scTop = $(this).scrollTop();
+    console.log(scTop);
+
+    var winHeight = $(this).height();
+    console.log('브라우저 화면의 높잇값: ' + winHeight);
+    
+    var gap = Math.ceil(winHeight * 0.9);
+    console.log('gap: ' + gap);
+
+    /* 
+    수학객체 메서드를 통해 정수 반환받기
+
+    Math.ceil(값); - 소숫점 첫째자리에서 '무조건' 올림
+    Math.floor(값); - 소숫점 첫째자리에서 '무조건' 내림
+    Math.round(값); - 소숫점 첫째자리에서 반올림
+
+    
+    */
+
+    //3번 박스 등장
+
+    var box1pos = $('.txt-box1').eq(0).offset().top - gap; 
+    console.log('3번째 박스 등장 스크롤 기준값: ' + box3pos);
+
+    if (scTop > box1pos) {
+        $('.txt-box1').eq(0).animate({
+            opacity:1
+        },1000);
+    }
+
+    //4번 박스 등장
+    var box2pos = $('#img-box1').eq(0).offset().top - gap;
+
+    if(scTop > box2pos) {
+        $('#img-box1').eq(0).animate({
+            opacity:1
+        },1000, );
+    }
+
+    var box3pos = $('.txt-box2').eq(0).offset().top - gap;
+
+    if(scTop > box3pos) {
+        $('.txt-box2').eq(0).animate({
+            opacity:1
+        },1000);
+    }
+
+    var box4pos = $('#img-box2').eq(0).offset().top - gap;
+
+    if(scTop > box4pos) {
+        $('#img-box2').eq(0).animate({
+            opacity:1
+        },1000);
+    }
+
+    var box4pos = $('.txt-box3').eq(0).offset().top - gap;
+
+    if(scTop > box4pos) {
+        $('.txt-box3').eq(0).animate({
+            opacity:1
+        },1000);
+    }
+
+    var box4pos = $('.box').eq(3).offset().top - gap;
+
+    if(scTop > box4pos) {
+        $('.box').eq(3).find('.img-box').animate({
+            width: '50%'
+        },800, function(){
+            $(this).prev().fadeIn(600);
         });
+    }
+});
 

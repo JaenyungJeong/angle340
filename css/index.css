@@ -223,6 +223,27 @@ main .pager li.active {
     margin-bottom: 90px;
 }
 
+.txt-box1 {
+    opacity: 0;
+}
+
+#img-box1 {
+    opacity: 0;
+}
+
+.txt-box2 {
+    opacity: 0;
+}
+
+#img-box2 {
+    opacity: 0;
+}
+
+.txt-box3 {
+    opacity: 0;
+}
+
+
 .intro .cafe-intro .intro-title {
     margin-bottom: 20px;
     padding: 10px 10px;
@@ -364,7 +385,6 @@ main .pager li.active {
 .intro .content .content-box .intro-title {
     margin-bottom: 20px;
     padding: 10px 10px;
-    line-height: 76px;
     /* outline: 2px solid blue; */
 }
 
@@ -387,8 +407,11 @@ main .pager li.active {
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     color: #555;
-
+    
     float: right;
+
+    margin-top: 26px;
+
 }
 
 .intro .content .content-box .box {
