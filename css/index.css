@@ -42,15 +42,19 @@ main .main-content .main-img-slide {
 .s1 {
     background: url(../img/main/main-img-3.jpg) no-repeat center/cover;
 }
+
 .s2 {
     background: url(../img/main/main-img-3-4.jpg) no-repeat center/cover;
 }
+
 .s3 {
     background: url(../img/main/main-img-3-5.jpg) no-repeat center/cover;
 }
+
 .s4 {
     background: url(../img/main/main-img-3-7.jpg) no-repeat center/cover;
 }
+
 .s5 {
     background: url(../img/main/main-img-3-8.jpg) no-repeat center/cover;
 }
@@ -66,7 +70,7 @@ main .main-content .main-logo_title {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
-    font-family: "Rubik Dirt", system-ui;   
+    font-family: "Rubik Dirt", system-ui;
     color: #fff;
     text-transform: uppercase;
     position: absolute;
@@ -80,6 +84,7 @@ main .main-content .main-logo_title {
     transition: opacity 5s ease-in-out;
 
 }
+
 main .main-content .main-logo_title .title-box {
     margin-bottom: 30px;
 }
@@ -172,7 +177,7 @@ main .pager li {
     color: rgba(246, 235, 227, 0.6);
     display: inline-block;
     font-size: 20px;
-    
+
 }
 
 main .pager li~li {
@@ -240,46 +245,47 @@ main .pager li.active {
 }
 
 .txt-box3 {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
 }
+
 .txt-box3.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #img-box3 {
     opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s;
+    transform: translateY(-100px);
+    transition: all 1s;
 }
 
 #img-box3.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .txt-box4 {
     opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s;
+    transform: translateY(-100px);
+    transition: all 1s;
 }
 
 .txt-box4.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #img-box4 {
     opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s;
+    transform: translateY(-100px);
+    transition: all 1s;
 }
 
 #img-box4.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -438,7 +444,7 @@ main .pager li.active {
     font-size: 60px;
     font-weight: 500;
     margin-bottom: 0px;
-    
+
     float: left;
 }
 
@@ -446,7 +452,7 @@ main .pager li.active {
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     color: #555;
-    
+
     float: right;
 
     margin-top: 26px;
@@ -508,7 +514,7 @@ main .pager li.active {
 }
 
 .intro .content .content-box .box .content-intro p.english {
-    font-family: "Outfit",sans-serif;
+    font-family: "Outfit", sans-serif;
 }
 
 .intro .content .content-box .box .content-intro .bigtxt {
@@ -936,12 +942,12 @@ section.insta {
     margin: 0 auto 90px;
 }
 
-.insta .insta-box > p {
+.insta .insta-box>p {
     font-size: 24px;
     text-align: center;
 }
 
-.insta .insta-box > p a {
+.insta .insta-box>p a {
     color: #777;
 }
 
@@ -962,6 +968,7 @@ section.insta .insta-box ul~ul {
     margin-left: 1%;
 
 }
+
 section.insta .insta-box ul li {
     margin-bottom: 4%;
 
@@ -973,14 +980,14 @@ section.insta .insta-box ul li {
 
 section.insta .insta-box ul li:hover {
     transform: scale(1.1);
-    
+
 }
 
 section.insta .insta-box ul li img {
     width: 100%;
     display: block;
 
-    
+
 }
 
 section.insta .insta-box ul li .img-des {
@@ -994,8 +1001,49 @@ section.insta .insta-box ul li .img-des {
 section.insta .insta-box ul li .img-des h4 {
     font-weight: bold;
 }
+
 section.insta .insta-box ul li .img-des p {
     font-weight: 200;
 }
 
 
+.floating-img1 {
+    width: 100%;
+    animation: floatUpDown1 3s ease-in-out infinite;
+}
+
+
+@keyframes floatUpDown1 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    /* 위로 떠오름 */
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-img2 {
+    width: 100%;
+    animation: floatUpDown2 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    /* 위로 떠오름 */
+    100% {
+        transform: translateY(0px);
+    }
+}
