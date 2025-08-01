@@ -31,15 +31,15 @@ $(document).ready(function () {
     });
 
     //이전 버튼을 클릭했을 때
-    $('.prev a').click(function(e){
+    $('.prev a').click(function (e) {
         e.preventDefault();
         $('.latte-box-slider').animate({
-            marginLeft : '+=' + liW //클릭했을 때 마진 0이 되어야함 
-        },800, function(){
+            marginLeft: '+=' + liW //클릭했을 때 마진 0이 되어야함 
+        }, 800, function () {
             //다음을 위한 준비!!
             $('.latte-box-slider .latte-box:last').prependTo('.latte-box-slider');
             $('.latte-box-slider').css('margin-left', -liW);
-        }); 
+        });
     });
 });
 
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
         /* $('.handmade-box_wrap .handmade-box:first').appendTo('.handmade-box_wrap');
         $('.handmade-box_wrap').css('margin-left', -liW);  */
-        
+
         $('.handmade-box_wrap').animate({
             marginLeft: '-=' + liW //클릭했을 때 마진 -1800이 되어야함 
         }, 800, function () {
@@ -80,15 +80,15 @@ $(document).ready(function () {
     });
 
     //이전 버튼을 클릭했을 때
-    $('.prev2 a').click(function(e){
+    $('.prev2 a').click(function (e) {
         e.preventDefault();
         $('.handmade-box_wrap').animate({
-            marginLeft : '+=' + liW //클릭했을 때 마진 0이 되어야함 
-        },800, function(){
+            marginLeft: '+=' + liW //클릭했을 때 마진 0이 되어야함 
+        }, 800, function () {
             //다음을 위한 준비!!
             $('.handmade-box_wrap .handmade-box:last').prependTo('.handmade-box_wrap');
             $('.handmade-box_wrap').css('margin-left', -liW);
-        }); 
+        });
     });
 });
 
@@ -114,7 +114,7 @@ $(document).ready(function () {
 
         /* $('.handmade-box_wrap .handmade-box:first').appendTo('.handmade-box_wrap');
         $('.handmade-box_wrap').css('margin-left', -liW);  */
-        
+
         $('.brewery-box_wrap').animate({
             marginLeft: '-=' + liW //클릭했을 때 마진 -1800이 되어야함 
         }, 800, function () {
@@ -128,28 +128,63 @@ $(document).ready(function () {
     });
 
     //이전 버튼을 클릭했을 때
-    $('.prev2 a').click(function(e){
+    $('.prev2 a').click(function (e) {
         e.preventDefault();
         $('.brewery-box_wrap').animate({
-            marginLeft : '+=' + liW //클릭했을 때 마진 0이 되어야함 
-        },800, function(){
+            marginLeft: '+=' + liW //클릭했을 때 마진 0이 되어야함 
+        }, 800, function () {
             //다음을 위한 준비!!
             $('.brewery-box_wrap .brewery-box:last').prependTo('.brewery-box_wrap');
             $('.brewery-box_wrap').css('margin-left', -liW);
-        }); 
+        });
     });
 });
 
-$(document).ready(function(){
-            //mouseenter, mouseleave
-            //mouseover, mouseout
+$(document).ready(function () {
+    //mouseenter, mouseleave
+    //mouseover, mouseout
 
-            $('.depth01 > li').mouseenter(function(){
-                // $('.depth02').slideDown();
-                $(this).find('.depth02').stop().slideDown(); // .stop 슬라이드업 되는 것 멈추고 슬라이드 다운하기
-            });
+    $('.depth01 > li').mouseenter(function () {
+        // $('.depth02').slideDown();
+        $(this).find('.depth02').stop().slideDown(); // .stop 슬라이드업 되는 것 멈추고 슬라이드 다운하기
+    });
 
-            $('.depth01 > li').mouseleave(function(){
-                $('.depth02').stop().slideUp(); //슬라이드다운되는 것 멈추고 슬라이드 업하기
-            });
-        }); 
+    $('.depth01 > li').mouseleave(function () {
+        $('.depth02').stop().slideUp(); //슬라이드다운되는 것 멈추고 슬라이드 업하기
+    });
+});
+
+
+
+
+
+$(window).scroll(function () {
+
+    var scTop = $(this).scrollTop();
+    console.log(scTop);
+
+    var winHeight = $(this).height();
+    console.log('브라우저 화면의 높잇값: ' + winHeight);
+
+    var gap = Math.ceil(winHeight * 0.9);
+    console.log('gap: ' + gap);
+
+    var box4pos = $('.txt-box1').eq(0).offset().top - gap;
+
+    if (scTop > box4pos) {
+        $('.txt-box1').eq(0).addClass('active');
+    }
+
+    var box4pos = $('.txt-box2').eq(0).offset().top - gap;
+
+    if (scTop > box4pos) {
+        $('.txt-box2').eq(0).addClass('active');
+    }
+
+    var box4pos = $('.txt-box3').eq(0).offset().top - gap;
+
+    if (scTop > box4pos) {
+        $('.txt-box3').eq(0).addClass('active');
+    }
+
+});

@@ -89,4 +89,28 @@ if (scTop > box4pos) {
     $('.txt-box1').eq(0).addClass('active');
 }
 
+var box4pos = $('.txt-box2').eq(0).offset().top - gap;
+
+if (scTop > box4pos) {
+    $('.txt-box2').eq(0).addClass('active');
+}
+
+var box4pos = $('.txt-box3').eq(0).offset().top - gap;
+
+if (scTop > box4pos) {
+    $('.txt-box3').eq(0).addClass('active');
+}
+
+var box4pos = $('.txt-box4').eq(0).offset().top - gap;
+
+if (scTop > box4pos) {
+    $('.txt-box4').eq(0).addClass('active');
+}
+
+var box4pos = $('.txt-box5').eq(0).offset().top - gap;
+
+if (scTop > box4pos) {
+    $('.txt-box5').eq(0).addClass('active');
+}
+
 });

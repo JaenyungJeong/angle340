@@ -418,3 +418,47 @@ html, body {
     opacity: 1;
     transform: translateY(0);
 }
+
+.txt-box2 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box2.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-box3{
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box3.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-box4 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box4.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-box5 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box5.active {
+    opacity: 1;
+    transform: translateY(0);
+}

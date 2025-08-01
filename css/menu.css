@@ -648,3 +648,56 @@ section.brewery {
 }
 
 
+.floating-img1 {
+    animation: floatUpDown1 3s ease-in-out infinite;
+}
+
+
+@keyframes floatUpDown1 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    /* 위로 떠오름 */
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.txt-box1 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box1.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-box2 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box2.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-box3{
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s;
+}
+
+.txt-box3.active {
+    opacity: 1;
+    transform: translateY(0);
+}

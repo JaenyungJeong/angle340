@@ -347,6 +347,10 @@ body {
 .exhibition .exhibition-content .exhibition-box .cta-wrap {
     font-weight: bold;
     padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .exhibition .exhibition-content .exhibition-img {
@@ -369,6 +373,16 @@ body {
 
 .exhibition .exhibition-content .exhibition-box>div>a {
     /* float: right; */
+}
+
+/* exhibitions 섹션의 cta-button2 오른쪽 정렬 */
+.exhibition .cta-wrap #textContent2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.exhibition .cta-button2 {
+    margin-right: 0;
 }
 
 
